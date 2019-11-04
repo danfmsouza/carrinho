@@ -3,6 +3,7 @@ package br.edu.infnet.carrinho.servlet;
 import java.io.IOException;
 //import java.io.PrintWriter;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -36,8 +37,8 @@ public class CarrinhoServlet extends HttpServlet {
 //	    PrintWriter out = resp.getWriter();
 //		out.println("Olá EJB! " + produto );
 		
-		List<Produto> produtos = carrinho.listar();
-		req.setAttribute("listar", produtos);
+ 		List<Object> produtos = carrinho.listar();
+		req.setAttribute("listaProdutos", produtos);
 		req.getRequestDispatcher("lista.jsp").forward(req, resp);
 	}
 

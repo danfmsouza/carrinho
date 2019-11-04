@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,13 +12,15 @@
 <body>
   <form action="Lista" method="get">
   <div class="container">
-
+<%-- 	<!--  <%	List<Produto> lista = (List<Produto>)request.getAttribute("lista"); 	%> --> 	 --%>
 	<table class="table table-striped">
 	    <thead>
 	      <tr>
 	        <th>ID</th>
 	        <th>Nome</th>
 	        <th>Preco</th>
+	      <th></th>
+	      </tr>
 	    </thead>
 	    <tbody>
 	<c:forEach var = "produto" items = "${listaProdutos}" >
